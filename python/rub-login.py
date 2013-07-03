@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 #    CLI Lock-and-Key (LaK) automation script for the Ruhr-University
 #    of Bochum
-#    (c) 2010 by Jan Holthuis <jan.holthuis@ruhr-uni-bochum.de>
+#    Original Author: (c) 2010 by Jan Holthuis <jan.holthuis@ruhr-uni-bochum.de>
+#    Modified by: https://github.com/AlexandrosZ
 #
 #    This file is part of the "rub-login"-project.
 #
@@ -22,7 +23,7 @@
 
 # Define Lock-and-Key (LaK) credentials here
 import sys, os.path, ConfigParser, datetime, librublak
-path = os.path.expanduser("/tmp/www/.rub-loginrc")
+path = os.path.expanduser("~/.rub-loginrc")
 if not os.path.isfile(path):
   if os.name != "posix":
     time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
